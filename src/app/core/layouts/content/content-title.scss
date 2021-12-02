@@ -1,0 +1,35 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.content-title {
+  display: flex; align-items: center; padding: 0 16px;
+  .content-title-inner { flex: 1; }
+  h1, .breadcrumb {
+    display: flex; line-height: 1;
+    margin: 0; padding: 0;
+    font-size: $title-font-size; font-weight: $font-weight-semi-bold;
+  }
+  h1, .breadcrumb a, .breadcrumb span {
+    color: $title-color;
+  }
+  .breadcrumb {
+    list-style: none; align-items: center;
+    li.active {
+      a, span { color: $title-color-active; }
+    }
+    li:not(:last-child):after {
+      display: inline-block; content: '/'; color: #888888;
+      margin: 0 4px;
+    }
+    a:hover { text-decoration: none; }
+  }
+}

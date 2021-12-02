@@ -1,0 +1,147 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+$progress-color: $secondary-color;
+$progress-bg: #ffffffcc;
+
+#root { display: flex; flex-direction: column; min-height: 100%; }
+#route-lv0 { flex: 1; display: flex; flex-direction: column; }
+.header .container { padding: 0 16px; }
+.main .container { max-width: $container-max-width; margin: 0 auto; }
+.main .not-found-container { text-align: center; padding: 60px 16px 120px 16px; }
+
+.header {
+  @include elevation-z2;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1;
+}
+
+.main-loading-container { padding-top: $header-height; flex: 1; }
+.global-progress {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 2;
+  .progress-bar {
+    background: $progress-bg;
+    .progress-value {
+      position: relative; overflow: hidden; height: 2px; background: $progress-color;
+      transition: width .5s ease-out;
+    }
+    .progress-value-inner {
+      position: absolute; top: 0; height: 2px; width: 25%; background: lighten($progress-color, 20%);
+      animation: progress-inner 1s ease-out infinite;
+    }
+    @keyframes progress-inner {
+      0% { left: 0; }
+      100% { left: 100%; }
+    }
+  }
+}
+.main {
+  padding-top: $header-height; flex: 1;
+  .container > article, .container > .s-wrap {
+    border-radius: 4px; border: 1px solid $gray-200;
+    background: #ffffff;
+    margin: 16px;
+    @include media-breakpoint-down(md) {
+      border-radius: 0; border: none; margin: 0;
+    }
+  }
+}
+.s-wrap {
+  display: grid; grid-template-columns: 250px 1fr;
+  @include media-breakpoint-down(md) { grid-template-columns: 1fr; }
+  .s-sidebar { background: $sidebar-bg; padding: 16px 0; }
+  .s-sidebar-title {
+    font-weight: normal; margin-bottom: 16px; padding: 0 16px; font-size: $font-size-h3;
+    @include media-breakpoint-down(md) { display: none; }
+  }
+  .s-main { overflow: hidden; }
+}
+
+.content-title {
+  margin-top: 8px; margin-bottom: 8px;
+  .content-title-inner { margin-top: 16px; margin-bottom: 16px; }
+  .actions {
+    margin-top: 8px; margin-bottom: 8px; margin-right: -$actions-gap;
+    > * {
+      margin-right: $actions-gap;
+    }
+  }
+}
+
+.content {
+  padding: 0 16px 16px 16px;
+  &.content-list {
+    padding-left: 0; padding-right: 0;
+  }
+  .data-table-wrap .table-responsive {
+    border-left: 8px solid transparent; border-right: 8px solid transparent;
+  }
+  &.content-form {
+    padding-left: 20px; padding-right: 20px;
+    .data-table-wrap {
+      margin-left: -16px; margin-right: -16px;
+    }
+    .alert { margin-left: -8px; margin-right: -8px; }
+  }
+}
+.content-actions {
+  display: flex; padding: 8px (16px - $actions-gap) 4px 16px; align-items: center;
+  > * {
+    margin-right: $actions-gap;
+  }
+  > button {
+    min-width: 75px;
+  }
+  .search-container {
+    flex: 1;
+  }
+  hr {
+    height: 24px; margin: 4px 8px 4px 4px;
+  }
+}
+
+#toast-container {
+  position: fixed; top: 0; right: 0; z-index: 9999; overflow-y: auto;
+  display: flex; flex-direction: column; align-items: flex-end;
+  padding: 16px;
+  .alert-wrap {
+    overflow-y: auto;
+    transition: all .3s ease;
+    opacity: 0; transform: translateX(16px); max-height: 0;
+    &.visible {
+      opacity: 1; transform: translateX(0); max-height: 500px;
+      padding-bottom: 4px;
+    }
+  }
+  .alert {
+    @include elevation-z1;
+    display: inline-block; max-width: 600px; min-width: 300px; padding: 8px 16px; margin: 0;
+    border: none;
+  }
+  .exception-info {
+    margin-top: 8px; font-size: .85rem; opacity: .75;
+    .exception-message {
+      margin-top: 4px;
+    }
+    .trace-wrap { margin-top: 8px; }
+    .trace {
+      max-width: 600px - 32px; white-space: nowrap; overflow-x: auto;
+      list-style: none; margin: 4px 0 0 0; padding: 0;
+    }
+  }
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+.divider {
+  border-top: 1px solid $border-color; margin: 16px 0;
+}

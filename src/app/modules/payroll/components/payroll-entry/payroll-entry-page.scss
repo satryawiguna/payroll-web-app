@@ -1,0 +1,19 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.page-payroll-entry {
+  @include media-breakpoint-up(xl) {
+    .advanced-search .form-item {
+      grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr;
+    }
+  }
+}

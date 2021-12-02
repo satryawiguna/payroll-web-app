@@ -1,0 +1,38 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.header {
+  font-size: .95rem;
+  .container {
+    display: flex; align-items: center;
+    height: $header-height; max-width: initial;
+  }
+
+  .header-bar {
+    background: $header-bg; color: $header-color;
+    height: $header-height;
+
+    .app-logo {
+      margin: 0 8px 0 0; padding: 4px; border-radius: 100%;
+      background: #ffffff22;
+      img { width: 24px; }
+    }
+
+    .app-title {
+      font-size: $header-font-size; font-weight: $font-weight-bold;
+      margin: 0 32px 0 0;
+      span.title-1 { color: darken($header-color, 20%); }
+      span.title-2 { color: $header-color; }
+      span.small { font-size: 0.65em; color: darken($header-color, 10%); margin-left: 8px; font-weight: $font-weight-light; }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.form-sm {
+  max-width: breakpoint-min(sm); margin-left: auto; margin-right: auto;
+}
+
+.form-item {
+  display: grid; gap: 0 24px;
+  .MuiDivider-root { margin-top: 16px; margin-bottom: 16px; }
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: auto 1fr;
+    .form-title, .form-subtitle, .MuiDivider-root { grid-column: span 2; }
+  }
+  &.wide {
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: 1fr 1fr;
+      .form-title, .form-subtitle, .MuiDivider-root { grid-column: span 2; }
+    }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto 1fr auto 1fr;
+      .form-title, .form-subtitle, .MuiDivider-root { grid-column: span 4; }
+    }
+  }
+  &.x-wide {
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: 1fr 1fr;
+      .form-title, .form-subtitle, .MuiDivider-root { grid-column: span 2; }
+    }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto 1fr auto 1fr auto 1fr;
+      .form-title, .form-subtitle, .MuiDivider-root { grid-column: span 6; }
+    }
+  }
+  .form-label {
+    margin: 8px -12px 2px 0; white-space: nowrap;
+    .required { color: $red; }
+    @include media-breakpoint-down(lg) {
+      font-size: $input-font-size-sm; font-weight: $font-weight-semi-bold; color: $gray-600;
+      margin-top: 0;
+    }
+  }
+  .block-label {
+    text-align: center; background: $gray-200; padding: 1px 8px;
+    margin: 0 0 8px 0;
+  }
+  .form-control {
+    overflow: hidden;
+    margin-left: -8px; padding-left: 8px; padding-top: 1px; padding-bottom: 10px;
+    .form-control-inner {
+      display: flex; margin-left: -$actions-gap;
+      > * { margin-left: $actions-gap; }
+      .form-label { margin-right: 8px; }
+    }
+    .app-input { margin-bottom: 2px; }
+    .input-error { margin-top: -3px; padding: 0 2px; }
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 24px;
+    }
+  }
+  .form-subtitle.divider {
+    position: relative; border-top: none; display: flex; align-items: center;
+    &:after {
+      content: ''; flex-grow: 1; margin-left: 8px;
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+
+.form-title {
+  display: flex; align-items: center;
+  margin: 0 0 16px 0; padding: 0; min-height: 32px;
+  font-size: $font-size-h3; font-weight: $font-weight-normal; color: $form-title-color;
+  h1 {
+    font-size: inherit; font-weight: inherit; color: inherit; margin: 0;
+    flex-grow: 1;
+  }
+  .form-title-actions {
+    display: flex; align-items: center;
+    > * { margin-left: $actions-gap; }
+  }
+}
+.form-subtitle {
+  margin: 8px 0 8px 0; padding: 0; min-height: 32px;
+  font-size: $font-size-h5; font-weight: $font-weight-semi-bold; color: $form-title-color;
+  h2 {
+    font-size: inherit; font-weight: inherit; color: inherit; margin: 0;
+  }
+}
+
+.form-actions {
+  display: flex; justify-content: flex-end;
+  margin-top: 8px; padding-top: 8px;
+  .app-button:not(:last-child), .app-secondary-button:not(:last-child) { margin-right: $actions-gap; }
+  .app-button, .app-secondary-button { min-width: 75px; }
+}

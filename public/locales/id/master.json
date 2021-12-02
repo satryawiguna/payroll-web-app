@@ -1,0 +1,31 @@
+{
+  "header": {
+    "employee-list": "Daftar Pegawai"
+  },
+  "label": {
+    "office": "Kantor",
+    "location": "Lokasi",
+    "department": "Department",
+    "project": "Proyek",
+    "position": "Posisi",
+    "grade": "Kelas/Tingkatan",
+    "head-office": "Head Office",
+    "branch-office": "Branch Office",
+    "employee": "Pegawai",
+    "employee-no": "NIK",
+    "employee-name": "Nama Pegawai",
+    "employee-no-name": "NIK/Nama Pegawai",
+    "people-group": "Kelompok Pegawai",
+    "employee-category": "Kategori Pegawai",
+    "full-time": "Purna Waktu",
+    "part-time": "Paruh Waktu",
+    "contract": "Kontrak",
+    "outsource": "Outsource",
+    "gender": "Jenis Kelamin",
+    "marital-status": "Status Kawin",
+    "child-count": "Jumlah Anak",
+    "religion": "Agama",
+    "phone-no": "No Telepon",
+    "join-date": "Tanggal Bergabung"
+  }
+}

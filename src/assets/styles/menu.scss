@@ -1,0 +1,40 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+$header-menu-color: #cfd8dc;
+$header-menu-color-hover: #ffffff;
+$header-menu-bg-hover: #ffffff44;
+
+.header-bar .menu-bar {
+  .menu-item-inner-lv0 .menu-link {
+    color: $header-menu-color;
+    &:hover { color: $header-menu-color-hover; background: $header-menu-bg-hover; }
+  }
+  .sub-menu .menu-link {
+    color: $body-color;
+  }
+  &.main-menu {
+    font-size: 1rem; font-weight: $font-weight-semi-bold;
+
+    .menu-item-inner-lv0 {
+      &, .menu-link {
+        height: $header-height; border-radius: 0;
+      }
+      .menu-link {
+        border-top: 3px solid transparent; border-bottom: 3px solid transparent;
+      }
+      .menu-link.active {
+        border-bottom-color: $header-menu-color; font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

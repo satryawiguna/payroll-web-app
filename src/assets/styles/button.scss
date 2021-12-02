@@ -1,0 +1,42 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.MuiButton-root {
+  box-shadow: none; text-transform: none; min-height: 32px;
+  font-size: $button-font-size;
+  &:hover { @include button-shadow; }
+  .MuiButton-startIcon {
+    position: relative; margin: -4px 6px -3px -8px;
+  }
+}
+.MuiButton-contained {
+  padding: 5px 16px 5px;
+}
+.MuiButton-containedPrimary {
+  background: linear-gradient($primary-color, darken($primary-color, 1.5%));
+}
+.MuiButton-outlined {
+  background: linear-gradient(#fafafa, darken(#fafafa, 1.5%));
+  padding: 5px 15px 4px;
+  .MuiTouchRipple-root { top: -1px; bottom: -1px; left: -1px; right: -1px; }
+}
+.MuiIconButton-root {
+  padding: 4px; min-width: 32px; min-height: 32px;
+}
+
+.app-button {
+  &.btn-warn.MuiButton-contained { background: linear-gradient($color-danger, darken($color-danger, 1.5%)); }
+  &.btn-warn.MuiButton-text { color: $color-danger; }
+}
+.app-secondary-button {
+  &.btn-warn { color: $color-danger; border-color: rgba($color-danger, .5); }
+}

@@ -1,0 +1,42 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.form-element-link .form-item {
+  &.wide {
+    @include media-breakpoint-up(sm) {
+      .form-control-wrap:nth-of-type(14) { grid-column: span 2; }
+    }
+
+    @include media-breakpoint-up(xl) {
+      .form-control:nth-of-type(1) { grid-column: span 3; }
+      .form-control:nth-of-type(2) { grid-column: span 3; }
+      .form-control:nth-of-type(14) { grid-column: span 3; }
+    }
+  }
+}
+
+.dialog-element-link .form-item {
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: 1fr 1fr;
+    .form-title, .form-subtitle, .divider { grid-column: span 2; }
+    .form-control-wrap:nth-of-type(1) { grid-column: span 2; }
+    .form-control-wrap:nth-of-type(2) { grid-column: span 2; }
+    .form-control-wrap:nth-of-type(14) { grid-column: span 2; }
+  }
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: auto 1fr auto 1fr;
+    .form-title, .form-subtitle, .divider { grid-column: span 4; }
+    .form-control:nth-of-type(1) { grid-column: span 3; }
+    .form-control:nth-of-type(2) { grid-column: span 3; }
+    .form-control:nth-of-type(14) { grid-column: span 3; }
+  }
+}

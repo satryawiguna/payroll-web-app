@@ -1,0 +1,60 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+html, body {
+  margin: 0; padding: 0; width: 100%; height: 100%;
+  font-size: $body-font-size; font-weight: $font-weight-normal;
+}
+h1, .MuiTypography-h1 {
+  font-size: $font-size-h1; color: $title-color;
+}
+h2, .MuiTypography-h2 {
+  font-size: $font-size-h2; color: $title-color;
+}
+h3, .MuiTypography-h3 {
+  font-size: $font-size-h3; color: $title-color;
+}
+h4, .MuiTypography-h4 {
+  font-size: $font-size-h4; color: $title-color;
+}
+a {
+  color: $link-color; cursor: pointer;
+}
+p {
+  font-size: 1.1rem;
+}
+hr, .MuiDivider-root {
+  border: none; height: 1px; background-color: $border-color;
+}
+
+.material-icons {
+  font-size: 1.4rem;
+}
+.MuiButtonBase-root .MuiSvgIcon-root {
+  width: 1.4rem; height: 1.4rem;
+}
+
+.MuiTooltip-tooltip {
+  font-size: .8em;
+  @include elevation-z1;
+}
+
+.badge-secondary {
+  color: $badge-secondary-color;
+  background: $badge-secondary-bg;
+  border: 1px solid $badge-secondary-border;
+}
+
+.trim-350 {
+  max-width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+span.trim-350 { display: inline-block; }

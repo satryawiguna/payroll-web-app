@@ -1,0 +1,104 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import 'mixin';
+
+$red: #f44336;
+$purple: #ab47bc;
+$indigo: #3f51b5;
+$blue: #2196f3;
+$cyan: #00bcd4;
+$teal: #009688;
+$green: #388e3c;
+$yellow: #f9a825;
+$orange: #e64a19;
+
+$color-info: $cyan;
+$color-success: $green;
+$color-warn: $yellow;
+$color-danger: $orange;
+$color-checked: $green;
+$color-unchecked: $red;
+
+$primary-color: #0277bd;
+$secondary-color: #ff5722;
+$body-color: #212121;
+$body-bg: #eff4fb;
+$link-color: #1976d2;
+$border-color: #00000011;
+
+// bootstrap override
+$primary: $primary-color;
+$secondary: $gray-600;
+$success: $color-success;
+$info: $color-info;
+$warning: $color-warn;
+$danger: $color-danger;
+$light: $gray-100;
+$dark: $gray-800;
+
+$font-family-base: 'Mulish', sans-serif;
+$font-family-monospace: 'Fira Code', 'Consolas', monospace;
+$line-height-base: 1.5;
+$font-weight-thin: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$font-size-h1: 1.5rem;
+$font-size-h2: 1.4rem;
+$font-size-h3: 1.3rem;
+$font-size-h4: 1.2rem;
+$font-size-h5: 1.1rem;
+
+$body-font-size: 13px;
+
+$container-max-width: 1400px;
+
+$header-height: 54px;
+$header-bg: #144061;
+$header-color: $gray-300;
+$header-font-size: 1.7rem;
+$sidebar-bg: #00000004;
+$title-font-size: 1.5rem;
+$title-color: #37474f;
+$title-color-active: #bf360c;
+
+$badge-padding-x: 6px;
+$badge-padding-y: 3px;
+$badge-font-size: .75rem;
+$badge-font-weight: $font-weight-semi-bold;
+$badge-secondary-color: $body-color;
+$badge-secondary-bg: $gray-100;
+$badge-secondary-border: $gray-400;
+
+$menu-hover-bg: $table-hover-bg;
+
+$table-font-size: 1rem;
+$table-color: $body-color;
+$table-border-color: #eeeeee;
+$table-hover-bg: #eceff1;
+$table-head-font-size: 0.975rem;
+$table-head-color: $gray-600;
+
+$form-title-color: #78909c;
+
+$input-font-size: 1.05rem;
+$input-label-font-size: 1rem;
+$input-border-color: $gray-500;
+$input-border-radius: 3px;
+$input-disabled-bg: #f5f5f5;
+
+$button-font-size: 0.9rem;
+
+$actions-gap: 5px;

@@ -1,0 +1,71 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.MuiBackdrop-root {
+  transition: opacity .2s cubic-bezier(.25,.8,.25,1) !important;
+}
+.MuiDialog-container {
+  transition: opacity .3s cubic-bezier(.25,.8,.25,1) !important;
+  animation: .05s dialog-animation ease-out;
+}
+.MuiDialog-scrollPaper { align-items: flex-start; }
+@include media-breakpoint-up(lg) {
+  .MuiDialog-paper { min-width: 350px; margin-top: 15vh; }
+}
+.dialog-lg .MuiDialog-paper {
+  min-width: calc(100% - 64px);
+}
+@include media-breakpoint-up(lg) {
+  .dialog-lg .MuiDialog-paper { min-width: 900px; }
+}
+
+.MuiDialogTitle-root {
+  padding: 12px 24px;
+  .MuiTypography-h6 { font-size: $title-font-size; font-weight: $font-weight-normal; }
+}
+.draggable-dialog .MuiDialogTitle-root {
+  cursor: move;
+}
+.MuiDialogActions-root.alert-dialog-actions {
+  padding-left: 16px; padding-right: 16px;
+  button { text-transform: uppercase; }
+}
+.MuiDialogActions-root:not(.alert-dialog-actions) {
+  padding-left: 16px; padding-right: 16px; padding-bottom: 14px;
+}
+.MuiDialogContent-root:first-child {
+  padding-top: 8px;
+}
+.MuiDialogContent-root .alert {
+  margin-left: -8px; margin-right: -8px;
+}
+
+.alert-dialog-content {
+  display: flex;
+  .dialog-icon {
+    margin-right: 12px; margin-top: 2px;
+    .MuiIcon-root { font-size: 2.75rem; color: #000000aa; }
+  }
+  .dialog-message { flex-grow: 1; font-size: 1.05rem; color: #000000cc; }
+}
+
+@keyframes dialog-animation {
+  0% { transform: translateY(-8px); transform-origin: top; }
+  100% { transform: translateY(0); transform-origin: top; }
+}
+
+.dialog-transition {
+  display: flex; justify-content: center;
+  &.enter {
+    transition: all 1s ease;
+  }
+}

@@ -1,0 +1,24 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.not-found-container {
+  .error-code {
+    font-size: 4rem; font-weight: $font-weight-normal; color: #00000044;
+  }
+  .error-description {
+    font-size: 1.2rem;
+  }
+  .error-message {
+    color: #00000088;
+  }
+  img { width: 32px; }
+}

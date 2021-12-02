@@ -1,0 +1,20 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.form-payroll-entry-employee {
+  @include media-breakpoint-up(sm) {
+    .form-control-wrap:nth-of-type(1) { grid-column: span 2; }
+  }
+  @include media-breakpoint-up(xl) {
+    .form-control:nth-of-type(1) { grid-column: span 3; }
+  }
+}

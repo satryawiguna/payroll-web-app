@@ -1,0 +1,31 @@
+{
+  "header": {
+    "employee-list": "Employee List"
+  },
+  "label": {
+    "office": "Office",
+    "location": "Location",
+    "department": "Department",
+    "project": "Project",
+    "position": "Position",
+    "grade": "Grade",
+    "head-office": "Kantor Pusat",
+    "branch-office": "Kantor Cabang",
+    "employee": "Employee",
+    "employee-no": "Employee No",
+    "employee-name": "Employee Name",
+    "employee-no-name": "Employee No/Name",
+    "people-group": "People Group",
+    "employee-category": "Employee Category",
+    "full-time": "Full Time",
+    "part-time": "Part Time",
+    "contract": "Contract",
+    "outsource": "Outsource",
+    "gender": "Gender",
+    "marital-status": "Marital Status",
+    "child-count": "Child Count",
+    "religion": "Religion",
+    "phone-no": "Phone No",
+    "join-date": "Join Date"
+  }
+}

@@ -1,0 +1,27 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/print';
+
+@import 'layout';
+@import 'typography';
+@import 'menu';
+@import 'dialog';
+@import 'input';
+@import 'button';
+@import 'form';

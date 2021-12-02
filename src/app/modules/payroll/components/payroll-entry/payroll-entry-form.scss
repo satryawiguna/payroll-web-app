@@ -1,0 +1,61 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.form-payroll-entry {
+  .form-item {
+    grid-template-columns: auto auto 1fr 1fr;
+    .form-subtitle { grid-column: span 4; }
+    .form-control.element-id, .form-control.effective { grid-column: span 3; }
+    .form-actions { margin-left: -16px; align-self: start; margin-top: 0; }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      .form-subtitle { grid-column: span 4; }
+      .form-control-wrap.element-id { grid-column: span 2; }
+      .form-control-wrap.effective { grid-column: span 2; }
+      .label-input-value { grid-column: span 4; }
+      .effective-detail { grid-column: span 2; }
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 4px;
+      .form-actions { margin-left: 8px; }
+      .form-subtitle { grid-column: span 2; }
+      .form-control-wrap.element-id { grid-column: span 2; }
+      .form-control-wrap.effective { grid-column: span 2; }
+      .label-input-value { grid-column: span 2; }
+      .effective-detail { grid-column: span 2; }
+    }
+  }
+
+  &.read-only .form-item {
+    grid-template-columns: auto auto 1fr 1fr auto;
+    .form-subtitle { grid-column: span 5; }
+    .form-actions:nth-of-type(2) { grid-row: span 2; }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      .form-subtitle { grid-column: span 5; }
+      .form-actions:nth-of-type(2) { grid-column: 5; margin-top: 20px; }
+      .form-control-wrap.effective { grid-column: 3 / span 2; grid-row: 1; }
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr 1fr auto;
+      .form-subtitle { grid-column: span 3; }
+      .form-actions { flex-direction: column-reverse; }
+      .form-actions:nth-of-type(2) { grid-column: 3; grid-row: span 2; }
+      .form-control-wrap.effective { grid-column: 1 / span 2; grid-row: 2; }
+      .label-input-value { grid-column: span 3; }
+    }
+  }
+}

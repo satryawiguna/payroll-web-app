@@ -1,0 +1,91 @@
+/*!
+ * Copyright (c) 2021 All Rights Reserved.
+ *
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * Proprietary and confidential.
+ *
+ * Written by:
+ *   - Satrya Wiguna <satrya@freshcms.net>
+ */
+
+@import 'variables';
+
+.data-table {
+  th, td { white-space: nowrap; }
+  thead {
+    th, td {
+      font-weight: $font-weight-bold; font-size: $table-head-font-size;
+      border-top: none; padding-top: 5px; padding-bottom: 5px;
+      color: $table-head-color;
+    }
+  }
+  tbody {
+    th, td {
+      font-size: $table-font-size;
+      padding-top: 4px; padding-bottom: 4px; height: 50px;
+      vertical-align: middle;
+    }
+  }
+
+  .check {
+    margin-top: -8px; margin-bottom: -8px;
+  }
+
+  thead .col-vert {
+    position: relative; z-index: 1;
+    transform: rotate(40deg) translate(-8px, -8px); transform-origin: bottom;
+    padding-top: 0; padding-bottom: 0;
+    > * {
+      writing-mode: vertical-rl; max-height: 80px; white-space: normal;
+      text-align: left; line-height: 1.2; margin-top: -8px;
+      transform: rotate(180deg);
+    }
+    &.no-border {
+      transform: rotate(40deg);
+      > * { margin-top: -16px; }
+    }
+  }
+
+  .no-border { border: none; }
+  .col-fit { width: 1px; text-align: center; }
+  .text-wrap { white-space: normal; }
+
+  .cell-primary { font-weight: $font-weight-semi-bold; }
+  .cell-muted { color: $gray-600; }
+  .cell-lg { font-size: 1.05rem; }
+  .cell-sm {
+    font-size: .95rem;
+    .MuiIcon-root { font-size: 1rem; width: auto; height: auto; }
+  }
+
+  .table-actions {
+    position: sticky; right: 0;
+    background: linear-gradient(90deg, #fff0 0, #fff 10%, #fff 100%);
+    text-align: right;
+    width: 14px; white-space: nowrap; padding-top: 0; padding-bottom: 0;
+    .app-icon-button {
+      padding: 7px;
+      &.MuiIconButton-root, .MuiIcon-root {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.data-table-hover {
+  tbody tr:not(.no-data):hover {
+    background-color: $table-hover-bg;
+    .table-actions {
+      background: linear-gradient(90deg, #fff0 0, $table-hover-bg 10%, $table-hover-bg 100%);
+      .btn-history:not(.Mui-disabled) { color: $teal; }
+      .btn-view:not(.Mui-disabled) { color: $green; }
+      .btn-edit:not(.Mui-disabled) { color: $purple; }
+      .btn-delete:not(.Mui-disabled) { color: $red; }
+    }
+    th, td { border-color: darken($table-border-color, 5%); }
+  }
+}
+
+.pagination-wrap {
+  padding: 8px 16px 0 16px;
+}
